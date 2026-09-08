@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Copy Review — Portfolio QA Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="trust-page copy-review-page">
+  <header class="topbar">
+    <a class="brand" href="index.html">QA / LAB</a>
+    <span class="demo-label">Copy check · 03</span>
+  </header>
+
+  <main class="trust-case">
+    <header class="trust-heading copy-heading">
+      <div>
+        <p class="eyebrow">PORTFOLIO QA · EDITORIAL REVIEW</p>
+        <h1>Make every word<br>earn its place.</h1>
+      </div>
+      <span class="status-pill pass" id="copy-status">READY TO REVIEW</span>
+    </header>
+
+    <section class="copy-workspace" data-copy-state="before" aria-live="polite">
+      <div class="copy-toolbar">
+        <span>CASE STUDY / ONBOARDING</span>
+        <div class="copy-toggle" aria-label="Copy version">
+          <button type="button" data-version="before" aria-pressed="true">Before</button>
+          <button type="button" data-version="after" aria-pressed="false">After</button>
+        </div>
+      </div>
+
+      <article class="copy-document before-copy" aria-labelledby="before-copy-title">
+        <div class="copy-margin"><span>01</span><span>02</span><span>03</span></div>
+        <div>
+          <span class="tag fail">ORIGINAL COPY</span>
+          <h2 id="before-copy-title">Designing a better first experience</h2>
+          <p>I was <mark>responsible to designing</mark> the onboarding flows for new users.</p>
+          <p>We simplified account setup <mark>in order to improve</mark> completion and <mark>make it more better</mark>.</p>
+          <p>The new flow helped users understand the product before creating their first workspace.</p>
+        </div>
+      </article>
+
+      <article class="copy-document after-copy" aria-labelledby="after-copy-title" hidden>
+        <div class="copy-margin"><span>✓</span><span>✓</span><span>✓</span></div>
+        <div>
+          <span class="tag pass">REVISED COPY</span>
+          <h2 id="after-copy-title">Designing a better first experience</h2>
+          <p>I <mark>designed</mark> the onboarding flow for new users.</p>
+          <p>We simplified account setup <mark>to improve</mark> completion and <mark>make it clearer</mark>.</p>
+          <p>The new flow helped users understand the product before creating their first workspace.</p>
+        </div>
+      </article>
+
+      <footer class="copy-result"><span>Clarity</span><strong id="copy-result-text">3 ISSUES TO FIX</strong></footer>
+    </section>
+  </main>
+
+  <script>
+    const workspace = document.querySelector('.copy-workspace');
+    const beforeCopy = document.querySelector('.before-copy');
+    const afterCopy = document.querySelector('.after-copy');
+    const status = document.querySelector('#copy-status');
+    const result = document.querySelector('#copy-result-text');
+    document.querySelectorAll('[data-version]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const showAfter = button.dataset.version === 'after';
+        workspace.dataset.copyState = showAfter ? 'after' : 'before';
+        beforeCopy.hidden = showAfter;
+        afterCopy.hidden = !showAfter;
+        status.textContent = showAfter ? '3 COPY ISSUES FIXED' : 'READY TO REVIEW';
+        result.textContent = showAfter ? '3 COPY ISSUES FIXED' : '3 ISSUES TO FIX';
+        document.querySelectorAll('[data-version]').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+      });
+    });
+  </script>
+</body>
+</html>

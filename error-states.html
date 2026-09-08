@@ -4,16 +4,10 @@
 <body>
   <header class="topbar"><a class="brand" href="index.html">QA / LAB</a><span class="demo-label">Trust check</span></header>
   <main class="case">
-    <div class="case-head"><div><p class="eyebrow">BROKEN LINKS · DEAD BUTTONS · COPY</p><h1>Quiet trust killers.</h1></div></div>
+    <div class="case-head"><div><p class="eyebrow">ACCESSIBILITY · FORM FEEDBACK</p><h1>Error states need<br>more than color.</h1></div></div>
     <section class="comparison-grid">
-      <article class="panel"><span class="tag fail">FAIL · COLOR ONLY</span><h2>Form error</h2><label class="field-label" for="bad-email">Email address</label><input class="error-input" id="bad-email" value="mina@"></article>
-      <article class="panel"><span class="tag pass">PASS · TEXT + ICON</span><h2>Form error</h2><label class="field-label" for="good-email">Email address</label><p class="error-copy" id="good-error"><span aria-hidden="true">⚠</span> Enter a valid email</p><input id="good-email"></article>
-    </section>
-    <section class="issue-list">
-      <article class="issue"><div class="issue-row"><div><span class="tag fail">DEAD BUTTON</span><h2>View project</h2><p>The control looks active but has no destination.</p></div><a class="primary-button" href="#">View work</a></div></article>
-      <article class="issue"><div class="coming-card"><div><span class="tag fail">NO DESTINATION</span><h2>Project Delta</h2><p>Coming soon</p></div></div></article>
-      <article class="browser-404"><span>NOT FOUND</span><strong>404</strong><p>The requested case study has moved. Return to selected work.</p><a class="primary-button" href="after.html">Back to work</a></article>
-      <article class="issue copy-edit"><span class="tag pass">COPY EDIT</span><h2>Read it like a stranger.</h2><p><del>I was responsible to designing the onboarding flows and improve conversion.</del> <ins>I led the design of onboarding flows and helped increase conversion.</ins></p></article>
+      <article class="panel"><span class="tag fail">FAIL · COLOR ONLY</span><h2>Form error</h2><label class="field-label" for="bad-email">Email address</label><input class="error-input" id="bad-email" value="mina@"><p>The red border is the only signal.</p></article>
+      <article class="panel"><span class="tag pass">PASS · TEXT + ICON</span><h2>Form error</h2><label class="field-label" for="good-email">Email address</label><p class="error-copy" id="good-error"><span aria-hidden="true">⚠</span> Enter a complete email address.</p><input class="error-input" id="good-email" value="mina@" aria-invalid="true" aria-describedby="good-error"></article>
     </section>
   </main>
 </body>
