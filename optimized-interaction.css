@@ -1,0 +1,17 @@
+.optimized-demo { cursor: auto; }
+.optimized-demo .live-dot { background: var(--lime); box-shadow: 0 0 12px rgba(217,255,67,.55); animation: none; }
+.optimized-demo .kinetic-stage { transform-style: flat; }
+.optimized-demo .blur-sphere { filter: blur(20px); mix-blend-mode: normal; will-change: auto; }
+.optimized-demo .sphere-a { opacity: .72; animation: float-a 9s ease-in-out infinite alternate; }
+.optimized-demo .sphere-b { opacity: .72; animation: float-b 11s ease-in-out infinite alternate; }
+.optimized-demo .chrome-word { animation: none; }
+.optimized-demo .tilt-card { will-change: auto; transition: transform .16s ease-out, box-shadow .2s ease; }
+.optimized-demo .card-art i { animation: art-spin 12s linear infinite; }
+.optimized-demo .cursor-orbit { width: 22px; height: 22px; opacity: .65; will-change: transform; }
+.optimized-demo .cursor-orbit i { inset: 0; animation: none; background: rgba(255,255,255,.35); }
+.optimized-demo .modal-rings i { animation-duration: 2.4s; }
+.optimized-demo .interaction-modal { transition-duration: .35s; }
+.optimized-note { justify-self: start; padding: 9px 12px; background: var(--lime); color: #111218; font: 900 .7rem/1 Arial; letter-spacing: .08em; text-transform: uppercase; }
+@media (prefers-reduced-motion: reduce) {
+  .optimized-demo *, .optimized-demo *::before, .optimized-demo *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
