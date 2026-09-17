@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>QA Checklist — Portfolio QA Demo</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <header class="topbar"><a class="brand" href="index.html">QA / LAB</a><span class="demo-label">Final inspection</span></header>
+  <main class="case">
+    <div class="case-head"><div><p class="eyebrow">RELEASE READINESS</p><h1>One last pass.</h1></div><span class="status-pill pass">READY TO SHIP</span></div>
+    <section class="checklist" aria-label="Quality assurance checklist">
+      <div class="check-row"><span class="check-icon">✓</span><strong>Performance</strong><span>OPTIMIZED</span></div>
+      <div class="check-row"><span class="check-icon">✓</span><strong>Contrast</strong><span>WCAG AA</span></div>
+      <div class="check-row"><span class="check-icon">✓</span><strong>Alt text</strong><span>MEANINGFUL</span></div>
+      <div class="check-row"><span class="check-icon">✓</span><strong>Error states</strong><span>VISIBLE</span></div>
+      <div class="check-row"><span class="check-icon">✓</span><strong>Responsive</strong><span>3 BREAKPOINTS</span></div>
+      <div class="check-row"><span class="check-icon">✓</span><strong>Links</strong><span>VALIDATED</span></div>
+      <div class="check-row"><span class="check-icon">✓</span><strong>Copy</strong><span>PROOFREAD</span></div>
+    </section>
+    <section class="progress-block" id="progress"><div class="progress-line"><div class="progress-fill"></div></div><div class="progress-meta"><div><span>QA PROGRESS</span><br><b>100%</b></div><span class="finished">READY</span></div></section>
+  </main>
+  <script>requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById('progress').classList.add('ready')));</script>
+</body>
+</html>

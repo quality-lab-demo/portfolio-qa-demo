@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Optimized Interaction — Portfolio QA Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="slow-interaction.css">
+  <link rel="stylesheet" href="optimized-interaction.css">
+</head>
+<body class="slow-demo optimized-demo load-disabled">
+  <div class="cursor-orbit" aria-hidden="true"><i></i></div>
+  <header class="topbar slow-topbar">
+    <a class="brand" href="index.html">QA / LAB</a>
+    <nav class="comparison-switch" aria-label="PageSpeed comparison">
+      <a href="slow-interaction.html">Before</a>
+      <a href="optimized-interaction.html" aria-current="page">After</a>
+    </nav>
+    <div class="performance-readout" aria-live="polite">
+      <span class="live-dot"></span>
+      <span id="fps">60</span> FPS
+      <span class="performance-state" id="performance-state">OPTIMIZED</span>
+    </div>
+    <span class="demo-label">PageSpeed · After</span>
+  </header>
+
+  <main>
+    <section class="slow-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">EXPERIMENT 06 · FOCUSED MOTION</p>
+        <h1>Just enough<br>to feel alive.</h1>
+        <p class="slow-lede">Move your cursor across the projects. Adjust the motion control. Open the full-screen interaction. The same experience now responds without competing for every frame.</p>
+        <button class="launch-button" id="launch" type="button"><span id="launch-label">Launch interaction</span><b>↗</b></button>
+      </div>
+      <div class="kinetic-stage" id="stage" aria-label="Interactive abstract artwork">
+        <div class="blur-sphere sphere-a"></div>
+        <div class="blur-sphere sphere-b"></div>
+        <div class="chrome-word">LIGHT</div>
+        <div class="stage-caption"><span>COMPOSITOR RENDER</span><span>3 LAYERS</span></div>
+      </div>
+    </section>
+
+    <section class="interaction-control">
+      <div><p class="eyebrow">MOTION INTENSITY</p><strong id="intensity-value">40%</strong></div>
+      <input id="intensity" type="range" min="20" max="100" value="40" aria-label="Motion intensity">
+      <div class="load-actions"><p>Transform · Cursor response · Focused transition</p><span class="optimized-note">Long tasks removed</span></div>
+    </section>
+
+    <section class="slow-projects" aria-label="Interactive project cards">
+      <article class="tilt-card card-one" tabindex="0"><span>01 / FINTECH</span><h2>Money,<br>made tangible.</h2><div class="card-art art-one"><i></i></div><p>Move cursor to tilt</p></article>
+      <article class="tilt-card card-two" tabindex="0"><span>02 / MOBILITY</span><h2>Routes that<br>feel obvious.</h2><div class="card-art art-two"><i></i></div><p>Move cursor to tilt</p></article>
+      <article class="tilt-card card-three" tabindex="0"><span>03 / WELLNESS</span><h2>Calm by<br>design.</h2><div class="card-art art-three"><i></i></div><p>Move cursor to tilt</p></article>
+    </section>
+  </main>
+
+  <div class="interaction-modal" id="interaction-modal" aria-hidden="true">
+    <button id="close-modal" type="button" aria-label="Close interaction">×</button>
+    <div class="modal-rings" aria-hidden="true"><i></i><i></i></div>
+    <div class="modal-copy"><span>FRAME BUDGET</span><strong>16.7<small>ms</small></strong><p>Motion supports the hierarchy.</p></div>
+  </div>
+
+  <script src="optimized-interaction.js"></script>
+</body>
+</html>

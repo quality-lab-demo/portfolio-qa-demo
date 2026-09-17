@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dead Button — Portfolio QA Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="trust-page dead-button-page">
+  <header class="topbar">
+    <a class="brand" href="index.html">QA / LAB</a>
+    <span class="demo-label">Interaction check · 01</span>
+  </header>
+
+  <main class="trust-case">
+    <header class="trust-heading">
+      <div>
+        <p class="eyebrow">PORTFOLIO QA · BROKEN INTERACTION</p>
+        <h1>The button looks ready.<br>It leads nowhere.</h1>
+      </div>
+      <span class="status-pill fail">1 ISSUE ISOLATED</span>
+    </header>
+
+    <section class="project-stage" aria-labelledby="project-title">
+      <div class="project-stage-bar">
+        <span>SELECTED WORK / 2026</span>
+        <span>INTERACTION TEST</span>
+      </div>
+      <article class="feature-project">
+        <div class="feature-project-art" aria-hidden="true">
+          <span class="art-index">02</span>
+          <span class="art-word">ORBIT</span>
+          <span class="art-disc"></span>
+        </div>
+        <div class="feature-project-copy">
+          <p class="eyebrow">PRODUCT DESIGN · FINTECH</p>
+          <h2 id="project-title">Orbit mobile banking</h2>
+          <p>A calmer way to plan, move, and understand money across everyday accounts.</p>
+          <dl class="project-meta">
+            <div><dt>Role</dt><dd>Lead product designer</dd></div>
+            <div><dt>Year</dt><dd>2026</dd></div>
+          </dl>
+          <div class="dead-action-row">
+            <button class="dead-project-button" type="button">
+              <span>View project</span><span aria-hidden="true">↗</span>
+            </button>
+            <span class="qa-flag">DEAD BUTTON · NO DESTINATION</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <p class="recording-note"><span aria-hidden="true">●</span> Click “View project.” The press state appears, but navigation never starts.</p>
+  </main>
+</body>
+</html>

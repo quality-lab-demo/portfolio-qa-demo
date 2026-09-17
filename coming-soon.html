@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Coming Soon and Broken Link — Portfolio QA Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="trust-page">
+  <header class="topbar">
+    <a class="brand" href="index.html">QA / LAB</a>
+    <span class="demo-label">Link check · 02</span>
+  </header>
+
+  <main class="trust-case">
+    <header class="trust-heading">
+      <div>
+        <p class="eyebrow">PORTFOLIO QA · DESTINATION CHECK</p>
+        <h1>Two cards.<br>Two different problems.</h1>
+      </div>
+      <span class="status-pill fail">2 LINKS REVIEWED</span>
+    </header>
+
+    <section class="destination-grid" aria-label="Project destination examples">
+      <article class="destination-card destination-disabled" aria-labelledby="delta-title">
+        <div class="destination-art delta-art" aria-hidden="true"><span>DELTA</span><i></i></div>
+        <div class="destination-copy">
+          <div class="destination-topline"><span>PROJECT 03</span><span class="qa-flag">NO DESTINATION</span></div>
+          <h2 id="delta-title">Project Delta</h2>
+          <p>A service concept still being prepared for publication.</p>
+          <span class="coming-status">Coming Soon</span>
+        </div>
+      </article>
+
+      <a class="destination-card destination-link" href="404.html" aria-labelledby="archive-title">
+        <div class="destination-art archive-art" aria-hidden="true"><span>ARCHIVE</span><i></i></div>
+        <div class="destination-copy">
+          <div class="destination-topline"><span>PROJECT 01</span><span class="qa-flag">BROKEN LINK</span></div>
+          <h2 id="archive-title">Archived Project</h2>
+          <p>The card appears valid, but its case study has been removed.</p>
+          <span class="link-callout">View case study <span aria-hidden="true">↗</span></span>
+        </div>
+      </a>
+    </section>
+
+    <p class="recording-note"><span aria-hidden="true">●</span> Hover Project Delta, then open Archived Project to continue into the recovery flow.</p>
+  </main>
+</body>
+</html>

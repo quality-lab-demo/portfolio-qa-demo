@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Before — Portfolio QA Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Intentional render-blocking work for a measurable performance demonstration.
+    const start = performance.now();
+    while (performance.now() - start < 1800) Math.sqrt(Math.random() * 999999);
+  </script>
+</head>
+<body class="before-page">
+  <header class="topbar"><a class="brand" href="index.html">QA / LAB</a><span class="demo-label">Before · intentionally flawed</span></header>
+  <main class="case">
+    <div class="case-head"><div><p class="eyebrow">PERFORMANCE · ACCESSIBILITY · RESPONSIVE</p><h1>Before QA</h1></div><span class="status-pill fail">7 ISSUES FOUND</span></div>
+    <div class="project-shell">
+      <nav class="project-nav"><span>Mina Park®</span><span class="project-links"><span>Work</span><span>About</span><span>Contact</span></span></nav>
+      <section class="hero">
+        <div><p class="eyebrow">PRODUCT DESIGNER · SEOUL</p><h2>Useful things, beautifully made.</h2><p class="low-contrast">I design digital products that turn complex systems into calm, intuitive experiences.</p></div>
+        <div class="poster noisy-card"><div class="poster-shape"></div></div>
+      </section>
+      <section class="metrics">
+        <div class="metric"><span>Projects shipped</span><b>12</b></div><div class="metric"><span>Years designing</span><b>04</b></div><div class="metric"><span>Happy teams</span><b>08</b></div>
+      </section>
+      <section class="form-box"><label class="field-label" for="email">Get project updates</label><input class="error-input" id="email" value="mina@"><br><a class="primary-button" href="#">Subscribe</a></section>
+    </div>
+  </main>
+  <script>
+    // Excess DOM is intentional so PageSpeed/Lighthouse has something real to flag.
+    const bin = document.createDocumentFragment();
+    for (let i = 0; i < 1600; i++) { const n = document.createElement('i'); n.hidden = true; n.textContent = i; bin.appendChild(n); }
+    document.body.appendChild(bin);
+  </script>
+</body>
+</html>
